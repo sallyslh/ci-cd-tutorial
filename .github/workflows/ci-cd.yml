@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: demo-site
-          path: build   # <-- use your actual build folder
+          path: build # <-- use your actual build folder
 
   cd:
     needs: ci
@@ -58,10 +58,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: demo-site
-          path: build   # <-- match the upload folder
+          path: build # <-- match the upload folder
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build   # <-- deploy the same folder
+          publish_dir: build # <-- deploy the same folder
