@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "build": "mkdir -p dist && cp -r src/* dist/",
+    "build": "shx mkdir -p dist && shx cp -r src/* dist/",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "eslint": "^9.39.2",
-    "prettier": "^3.7.4"
+    "prettier": "^3.7.4",
+    "shx": "^0.4.0"
   }
 }
